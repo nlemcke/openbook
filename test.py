@@ -1,19 +1,13 @@
 """
 Put my tests here:
 
-  >>> type(thing1)
-  <class 'list'>
-  >>> type(thing2)
-  <class 'tuple'>
-  >>> type(thing3)
-  <class 'str'>
-
+  >>> thing[2] = 17
+  >>> thing[2]
+  17
 """
 # Put your solutions here:
 
-thing1 = [1, 2, 3]
-thing2 = (1, 2, 3)
-thing3 = 'bananas'
+thing = [1, 2, 17]
 
 if __name__ == "__main__":
     import doctest
