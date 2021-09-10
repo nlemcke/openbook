@@ -1,17 +1,10 @@
-import random
+sentence = input("Please enter a sentence: ")
+newsen = ''
 
-number = random.randrange(1, 100)
-guesses = 0
-guess = int(input("Guess my number between 1 and 100: "))
-
-while guess != number:
-    guesses += 1
-    print("Sorry, wrong answer.")
-    if guess > number:
-        print("My number is closer to 0")
-        guess = int(input("Guess again: "))
+for letters in sentence:
+    if letters != " ":
+        newsen = newsen + letters
     else:
-        print("My number is closer to 100")
-        guess = int(input("Guess again: "))
+        continue
 
-print("Good job", number, "is my number!")
+print("Your sentence without spaces is: /n", newsen)
