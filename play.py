@@ -1,8 +1,8 @@
-sentence = input("Please enter a sentence: ")
-newsen = ''
+macros = [("carbs", ["pasta", "rice", "beans", "peanuts"]),
+        ("protein", ["chicken", "beans", "peanuts"]),
+        ("fat", ["avocado", "coconut", "peanuts"])]
 
-for letters in sentence:
-    if letters != " ":
-        newsen = newsen + letters
+for (macro, foods) in macros:
+    count = len(foods)
+    print("There are", count, "foods in", macro)
 
-print("Your sentence without spaces is: /n", newsen)
