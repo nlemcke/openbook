@@ -1,10 +1,12 @@
-n = int(input("Tell me a number: "))
+print("NUM\tDIV BY 2 OR 3")
+print("---\t-------------")
+for num in range(2, 21):
+    if num % 2 == 0 and num % 3 == 0:
+        print(num, "\tboth"
+    elif num % 2 == 0:
+        print(num, "\tdiv by 2")
+    elif num % 3 == 0:
+        print(num, "\tdiv by 3")
+    else:
+        print(num, "\tneither")
 
-count = 0
-while n > 0:
-    digit = n % 10
-    if digit == 0 or digit == 5:
-        count += 1
-    n = n // 10
-
-print(count)
