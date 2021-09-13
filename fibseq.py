@@ -1,9 +1,14 @@
 def fibonacci(n):
-    seq = [1, 1]
+    """return the nth number in Fibonacci's sequence"""
 
-    for j in range(n - 1):
-        seq.append(seq[-1] + seq[-2])
+    if n == 0 or n == 1:
+        return 1
+    elif n < 0:
+        return 'Not Defined'
+    else:
+        seq = [1, 1]
 
-    return seq[-1]
+        for j in range(n - 1):
+            seq.append(seq[-1] + seq[-2])
 
-print(fibonacci(4))
+        return seq[-1]
