@@ -1,13 +1,11 @@
-def seperate(list_of_stuff):
-    empty = ([], [], [])
-    for element in list_of_stuff:
-        if type(element) == float or int:
-            empty[0].append(element)
-        if type(element) == str or list or tuple:
-            empty[1].append(element)
-        else:
-            empty[2].append(element)
-    return empty
+def whats_your_name():
+    name = input("What's your name? ")
+    new_name = ''
+    count = 0
+    for letter in name:
+        count += 1
+        new_name += count * letter
+    print("Hi", new_name)
 
-print(seperate(['b']))
-print(type('a'))
+if __name__ == '__main__':
+    whats_your_name()
