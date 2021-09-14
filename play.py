@@ -1,14 +1,13 @@
-def fibonacci(n):
-    """return the nth number in Fibonacci's sequence"""
+def seperate(list_of_stuff):
+    empty = ([], [], [])
+    for element in list_of_stuff:
+        if type(element) == float or int:
+            empty[0].append(element)
+        if type(element) == str or list or tuple:
+            empty[1].append(element)
+        else:
+            empty[2].append(element)
+    return empty
 
-    if n == 0 or n == 1:
-        return 1
-    elif n < 0:
-        return 'Not Defined'
-    else:
-        seq = [1, 1]
-
-        for j in range(n - 1):
-            seq.append(seq[-1] + seq[-2])
-
-        return seq[-1]
+print(seperate(['b']))
+print(type('a'))
