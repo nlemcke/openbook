@@ -1,11 +1,9 @@
-def whats_your_name():
-    name = input("What's your name? ")
-    new_name = ''
-    count = 0
-    for letter in name:
-        count += 1
-        new_name += count * letter
-    print("Hi", new_name)
-
-if __name__ == '__main__':
-    whats_your_name()
+m = [[1, 2, 3], [4, 5, 6]]
+new_matrix = []
+for idx, val in enumerate(m[0]):
+   new_matrix.insert(idx, [val])
+if m[1]:
+    for row in m[1:]:
+        for idx, val in enumerate(row):
+            new_matrix[idx].append(val)
+print(new_matrix)
